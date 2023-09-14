@@ -8,13 +8,18 @@
 import Foundation
 import Alamofire
 
+struct TodoItem: Identifiable , Codable {
+    let id =  UUID()
+    var title : String
+    var desc : String
+    var completed: Bool
 
-struct TodoItem: Identifiable, Codable {
-    let id: Int
-    let title: String
-    let completed: Bool
+    enum CodingKeys : String , CodingKey {
+        case title
+        case desc
+        case completed
+    }
 }
-
 
 enum APIError : Error {
     case invalidUrl, requestError, decodingError, statusNotOk
@@ -27,12 +32,7 @@ struct ApiService {
     
  
     static func getTodoNew() {
-        
-        
-        
-
-            
-        
+                
     }
     
     

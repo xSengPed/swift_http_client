@@ -7,7 +7,9 @@ struct TodoView: View {
     var body: some View {
         VStack {
             Text("TODO")
-            
+            Button("POST") {
+                vm.createTodo()
+            }.buttonStyle(.borderedProminent)
             Text(String(vm.todos.count))
             
             List(vm.todos) {
