@@ -18,6 +18,7 @@
 		552BD4FF2AB2E8790060F71F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 552BD4FE2AB2E8790060F71F /* SwiftyJSON */; };
 		552BD5042AB2FAA20060F71F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BD5032AB2FAA20060F71F /* ApiService.swift */; };
 		552BD5062AB2FBC70060F71F /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BD5052AB2FBC70060F71F /* TodoViewModel.swift */; };
+		555A75F02AB44B4300B2E893 /* TodoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A75EF2AB44B4300B2E893 /* TodoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		552BD4EB2AB1BA500060F71F /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		552BD5032AB2FAA20060F71F /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		552BD5052AB2FBC70060F71F /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		555A75EF2AB44B4300B2E893 /* TodoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		552BD4F42AB1BFB20060F71F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				555A75EF2AB44B4300B2E893 /* TodoCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				552BD4BF2AB1B8C70060F71F /* ContentView.swift in Sources */,
 				552BD4BD2AB1B8C70060F71F /* SwiftTodoApp.swift in Sources */,
 				552BD4EC2AB1BA500060F71F /* TodoView.swift in Sources */,
+				555A75F02AB44B4300B2E893 /* TodoCard.swift in Sources */,
 				552BD5062AB2FBC70060F71F /* TodoViewModel.swift in Sources */,
 				552BD5042AB2FAA20060F71F /* ApiService.swift in Sources */,
 			);

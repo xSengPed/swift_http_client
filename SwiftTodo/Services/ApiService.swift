@@ -19,6 +19,8 @@ struct TodoItem: Identifiable , Codable {
         case desc
         case completed
     }
+    
+    
 }
 
 enum APIError : Error {

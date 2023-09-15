@@ -4,24 +4,44 @@ import SwiftUI
 
 struct TodoView: View {
     @StateObject var vm = TodoViewModel()
+
+    @State var title: String = ""
+    @State var desc: String = ""
+
     var body: some View {
-        VStack {
-            Text("TODO")
-            Button("POST") {
-                vm.createTodo()
-            }.buttonStyle(.borderedProminent)
-            Text(String(vm.todos.count))
-            
-            List(vm.todos) {
-                item in
-                Text(item.title)
+        NavigationView {
+            VStack {
+                List(vm.todos) { item in
+                    TodoCard(todo: item)
+                }
+                Spacer()
+
+                VStack {
+                    TextField("Todo Title", text: $title)
+                    Spacer()
+                        .frame(height: 16)
+                    TextField("Description", text: $desc)
+                    Spacer()
+                        .frame(height: 16)
+                    HStack {
+                        Button("Create New Todo") {
+                            vm.createTodo(todo: TodoItem(title: title, desc: desc, completed: false))
+                            title = ""
+                            desc = ""
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .buttonBorderShape(.capsule)
+                        .controlSize(.large)
+                    }
+                }
+                .padding()
             }
 
-        }
-        .task {
-          vm.getTodo()
-        }.onAppear()  {
+            .navigationTitle("My Todo Application")
+            .navigationBarTitleDisplayMode(.automatic)
 
+        }.onAppear {
+            vm.getTodo()
         }
     }
 }
